@@ -1,38 +1,135 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+.header {
+  margin-top: 100px;
   text-align: center;
+  /* max-width: 450px;
+  margin: auto; */
+  /* border: 5px solid black; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AddList {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* margin-bottom: 30px; */
+  /* border: 3px solid gray; */
+  margin: 30px auto;
+  width: 400px;
+  height: 50px;
+}
+
+.AddList .add-box input {
+  width: 300px;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 8px;
+  border: solid #c1c1c1;
+}
+
+.AddList .add-button button {
+  width: 50px;
+  height: 35px;
+  border-radius: 7px;
+  background-color: #1aa7ec;
+  border: solid #1aa7ec;
+}
+
+.AddList .add-button button:focus {
+  background-color: yellow;
+}
+
+.Filter {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid gray; */
+  width: 400px;
+  height: 30px;
+  margin: 30px auto;
+}
+
+.Filter .filter-by {
+  margin: 2px;
+}
+
+.Filter .filter-by button {
+  border-radius: 15px;
+  border: solid gray;
+  background-color: gray;
+  width: 90px;
+  height: 30px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.List {
+  position: fixed;
+  width: 380px;
+  max-height: 260px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  /* display: flex;
+  flex-direction: column-reverse; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: solid #c1c1c1;
+  margin-bottom: 15px;
+  height: 70px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.Card .box-checklist {
+  flex: 0.5;
+  /* background-color: #1aa7ec; */
+}
+
+.Card .text-list {
+  flex: 3;
+  /* background-color: bisque; */
+  /* display: flex;
+  text-align: left; */
+}
+
+/*ketika kotak checklist diklik maka tulisan akan tercoreng*/
+.crossed-line {
+  text-decoration: line-through;
+}
+
+.Card .icon {
+  display: flex;
+  flex: 1;
+}
+/* 
+.Card .edit {
+  background-color: blueviolet;
+}
+
+.Card .remove {
+  background-color: green;
+} */
+
+.Card .icon .edit,
+.remove {
+  width: 100%;
+}
+
+.Card .box-checklist input {
+  height: 25px;
+  width: 25px;
+  display: flex;
+}
+
+.Card .text-list h5 {
+  font-weight: 300;
+  text-align: left;
+  margin: auto;
+  padding: 5px;
 }
